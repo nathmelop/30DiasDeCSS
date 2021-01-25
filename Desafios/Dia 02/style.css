@@ -1,0 +1,36 @@
+body {
+    background: rgb(231, 173, 231);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    /* onde fica localizada a palavra*/
+}
+
+.text {
+    color: rgba(21, 54, 206, 0.931);
+    font-size: 40px;
+    font-family: Verdana;
+}
+
+.spinner {
+    /* tb da para fazer a bola inteira de uma cor e deixar um dos cantos com a cor diferente para ficar girando 
+    border-left-color: rgb(83, 47, 117);
+    /*Mudar a cor de um lado*/
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    /*deixa redondo*/
+    position: absolute;
+    animation: spin 1s linear infinite;
+    box-shadow: 3px 4px 2px rgb(226, 255, 6);
+}
+
+
+/*Quero que roda em 360 graus */
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
