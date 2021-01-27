@@ -1,0 +1,74 @@
+body {
+    margin: 0;
+    height: 100vh;
+    background: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/*tira o ponto do lado do nome*/
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    color: cadetblue;
+    width: 12em;
+    height: 3em;
+    border: 0.3em solid cadetblue;
+    text-align: center;
+    line-height: 3em;
+    /*sempre letra em capslock*/
+    text-transform: uppercase;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    letter-spacing: 0.1em;
+    position: relative;
+    overflow: hidden;
+    transition: 0.5s;
+    z-index: 1;
+    margin: 1em;
+    font-size: 25px;
+}
+
+nav ul li:hover {
+    color: rgb(0, 0, 0);
+}
+
+nav ul li span {
+    position: absolute;
+    width: 25%;
+    height: 100%;
+    background-color: cadetblue;
+    transform: translateY(150%);
+    left: calc((var(--n) - 1) * 25%);
+    transition: 0.5s;
+    border-radius: 50%;
+    transition-delay: calc((var(--n) - 1) * 0.1s);
+    overflow: hidden;
+    z-index: -1;
+}
+
+nav ul li:hover span {
+    transform: translateY(0) scale(2);
+}
+
+nav ul li span:nth-child(1) {
+    --n: 1;
+}
+
+nav ul li span:nth-child(2) {
+    --n: 2;
+}
+
+nav ul li span:nth-child(3) {
+    --n: 3;
+}
+
+nav ul li span:nth-child(4) {
+    --n: 4;
+}
